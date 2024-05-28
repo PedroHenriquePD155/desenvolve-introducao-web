@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Pesquisa de Satisfação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        label {
+            font-weight: bold;
+        }
+        .checkbox-label {
+            display: block;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="POST">
+        <h2>Dados Pessoais</h2>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required>
+        
+        <h2>Pesquisa de Satisfação</h2>
+        <label for="pergunta1">1. Como você avalia nosso atendimento?</label><br>
+        <input type="radio" id="excelente" name="atendimento" value="excelente" required>
+        <label for="excelente">Excelente</label>
+        <input type="radio" id="bom" name="atendimento" value="bom">
+        <label for="bom">Bom</label>
+        <input type="radio" id="regular" name="atendimento" value="regular">
+        <label for="regular">Regular</label>
+        <input type="radio" id="ruim" name="atendimento" value="ruim">
+        <label for="ruim">Ruim</label><br><br>
+
+        <label for="pergunta2">2. Recomendaria nossos serviços a outras pessoas?</label><br>
+        <input type="radio" id="sim" name="recomendar" value="sim" required>
+        <label for="sim">Sim</label>
+        <input type="radio" id="nao" name="recomendar" value="nao">
+        <label for="nao">Não</label><br><br>
+
+        <label for="pergunta3">3. Qual o motivo principal da sua avaliação?</label><br>
+        <select id="motivo" name="motivo" required>
+            <option value="">Selecione...</option>
+            <option value="preco">Preço</option>
+            <option value="qualidade">Qualidade</option>
+            <option value="atendimento">Atendimento</option>
+            <option value="outra">Outra razão</option>
+        </select><br><br>
+
+        <label class="checkbox-label">
+            <input type="checkbox" id="autorizacao" name="autorizacao">
+            Autorizo o compartilhamento das minhas respostas com terceiros.
+        </label>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
